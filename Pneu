@@ -1,0 +1,62 @@
+Entrada	  :  Troca Pneu de Carro PC(A,d,f)
+Instancia :  Defeitos = {Pneu Perfurado, Pneu Torto, Pneu com defeito}
+	     Ferramentas = { Triângulo de sinalização, chave de roda, macaco hidraúlico, estepe}
+	     
+Restrições: O Pneu pode apenas ser retirado quando a parte de carro está solto do chão.
+
+IniciarATroca():
+{
+	Desparafusar as porcas parcialmente.
+	Colocar o macaco em baixo do carro.
+	enquanto (Pneu esta no chão)
+		{Levantar macaco}
+	Desparafusar roda, soltando todas as porcas.
+	Colocar porcas no chão.
+	Colocar chave no chão.
+	Tirar o pneu da roda.
+	Colocar o estepe.
+	Pegar porcas no chão.
+	Colocar porcas no pneu.
+	Pegar chave de roda no chão.
+	Apertar todas as porcas parcialmente.
+	enquanto (estepe esta solto)
+		{Abaixar macaco}
+	Apertar bem forte todas as porcas.
+	Tirar o Macaco
+	Guardar()
+}
+
+Guardar():
+{
+	se (caixa Ferramenta == vazia){
+		Colocar o macaco.
+		Colocar o Pneu.
+		Colocar a Chave de roda.
+	}
+
+}
+
+
+	    
+main ()
+  se (d pertence ao Defeitos)
+	{
+		Abre a porta mala
+		se (Feramenta != vazio)
+		{
+			Pegar o macaco.
+			Pegar o estepe.
+			Pegar a chave de roda.
+			IniciarATroca()
+		} 
+		senão
+		{ 
+			Ligar para o tecnico.
+		}
+		Fechar a porta mala.
+}
+
+
+
+
+
